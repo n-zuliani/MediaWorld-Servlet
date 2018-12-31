@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>MediaWorld</title>
+  <style>
+   #login{
+    display: block;
+   }
+   #register{
+    display: none;
+   }
+  </style>
+    <script>
+	function toggle_visibility(id1, id2) {
+	    document.getElementById(id1).style.display='block';
+		document.getElementById(id2).style.display='none';
+    }
+  </script>
+ </head>
+ <body>
+  <h1 align="center">MediaWorld</h1>
+  <p align="center"><a href="javascript:void(0);" onClick="toggle_visibility('login', 'register');">LOGIN</a> | <a href="javascript:void(0);" onClick="toggle_visibility('register', 'login');">REGISTRATI</a></p>
+  <div id="login" align="center">
+    <form action="home" method="post">
+	 <input type="text" name="LoginUser" placeholder="username"/><br>
+	 <input type="password" name="LoginPassword" placeholder="password"/><br>
+	 <input type="submit" name="login" value="Login"/>
+	</form>
+  </div>
+  <div id="register" align="center">
+    <form action="home" method="post">
+	 <input type="text" name="nome" placeholder="Nome"/><br>
+	 <input type="text" name="cognome" placeholder="Cognome"/><br>
+	 <input type="text" name="email" placeholder="Mail"/><br>
+	 <input type="text" name="username" placeholder="username"/><br>
+	 <input type="password" name="password" placeholder="password"/><br>
+	 <input type="submit" name="register" value="Registrati"/>
+	</form>
+  </div>
+  
+ </body>
+</html>
